@@ -1,0 +1,6 @@
+export {default as Box} from "./Box"
+export {default as Location} from "./Location"
+export { default as CarouselCards} from "./CarouselCards"
+export { default as CouponList} from "./CouponList"
+export { default as PopularOffers} from "./PopularOffers"
+export { default as Product} from "./Product"
