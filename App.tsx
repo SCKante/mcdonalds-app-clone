@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 25, 0.3)'
+    backgroundColor: 'rgba(0, 0, 0, 0.03)'
   },
   header: {
     height: 80,
@@ -78,10 +78,6 @@ const RootStackNavigator = () => {
       />
     </RootStack.Navigator>
   )
-}
-
-const BottomTabBar = (props: BottomTabBarProps) => {
-  return <Box flex={1} backgroundColor={'accent1'}></Box>
 }
 
 function TabNavigator() {

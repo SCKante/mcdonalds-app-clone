@@ -4,6 +4,8 @@ import images from '../../assets'
 import Product from './Product'
 import { useTheme } from '@shopify/restyle'
 import { Theme } from '../themes'
+import { useNavigation } from '@react-navigation/native'
+import { HomeNavigationProp } from '../constants'
 
 const DATA = [
   {
@@ -47,6 +49,7 @@ const DATA = [
 const { width } = Dimensions.get('screen')
 
 const PopularOffers = () => {
+  const navigation = useNavigation<HomeNavigationProp>()
   const { spacing } = useTheme<Theme>()
   const ProductWidth = width / 2 - spacing.l * 1.2
   return (
@@ -67,6 +70,15 @@ const PopularOffers = () => {
             width={ProductWidth}
             marginRight={index == DATA.length - 1 ? spacing.null : spacing.s}
             calories={offer.calories}
+            onPress={() => {
+              navigation.navigate('CardDetails', {
+                label: offer.label,
+                imgUrl: offer.imgUrl,
+                description: offer.description,
+                price: offer.price,
+                calories: offer.calories
+              })
+            }}
           />
         )
       })}

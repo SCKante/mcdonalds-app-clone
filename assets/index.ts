@@ -15,6 +15,7 @@ const images = {
     user: require("./user.png"),
     heart: require("./heart.png"),
     arrowLeft: require("./arrow-left.png"),
+    star: require("./star.png")
 }
 
 export default images

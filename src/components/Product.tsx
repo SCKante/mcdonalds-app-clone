@@ -19,6 +19,7 @@ interface ProductProps {
   width: number | string
   marginRight: number
   calories: number
+  onPress: () => void
 }
 
 const Product = ({
@@ -27,11 +28,13 @@ const Product = ({
   price,
   width,
   marginRight,
-  calories
+  calories,
+  onPress
 }: ProductProps) => {
   const { spacing, colors } = useTheme<Theme>()
   return (
     <TouchableOpacity
+      {...{ onPress }}
       style={{
         width,
         padding: spacing.m,
